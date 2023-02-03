@@ -1,69 +1,127 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>2023년 버킷리스트</title>
+    <title>Document</title>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Gaegu:wght@300;400;700&display=swap');
-        *{
-            font-family: 'Gaegu', cursive;
+        /* 이서윤체 폰트 적용을 위한 코드 */
+    @font-face {
+      font-family: "LeeSeoyun";
+      src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2202-2@1.0/LeeSeoyun.woff")
+        format("woff");
+      font-weight: normal;
+      font-style: normal;
+    }
 
-        }
-        .title {
-            color: white;
-            background-color: green;
-            font-size: 23px;
-            padding: 4px 14px;
-            border-radius: 8px;
-        }
+    /* body태그 자체에 css 요소 부여 */
+    body {
+	    font-family: "LeeSeoyun";
+	    margin: 0;
+	    display: flex;
+	    justify-content: center;
+	    background-image: url("./background.png");
+}
 
-        .bg {
-            width: 360px;
-            background-image: url("https://s3.ap-northeast-2.amazonaws.com/materials.spartacodingclub.kr/bucketList/bg-grid.png");
-        }
+.container{
+    width: 390px;
+    background-color: rgb(205, 231, 255);
+    height: 100%;
+}
 
-        .msg {
-            font-weight: bold;
-        }
+.photos{
+    margin-top: 30px;
+}
 
-        .bucket {
-            width: 160px;
-            height: 160px;
-        }
+.photo-frame{
+    background-color: white;
+    margin: 15px 20px;
+    height: 200px;
 
-        .img1 {
-            background-image: url("https://s3.ap-northeast-2.amazonaws.com/materials.spartacodingclub.kr/bucketList/bucket-red.png");
-            background-size: cover;
-            background-position: center;
-        }
+    background-size: cover;
+    position: relative;
+}
 
-        .img2 {
-            background-image: url("https://s3.ap-northeast-2.amazonaws.com/materials.spartacodingclub.kr/bucketList/bucket-lightred.png");
-            background-size: cover;
-            background-position: center;
-        }
+.footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.f-title{
+    color: white;
+    font-size: 25px;
+    font-weight: 900;
+}
+
+.f-date{
+    color: white;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+#image1{
+    background-image: url('./11.jpg');
+}
+
+#image2{
+    background-image: url('./2.jpg');
+}
+
+#image3{
+    background-image: url('./3.jpg');
+}
+
+#image4{
+    background-image: url('./4.jpg');
+}
+
+.photo-description{
+    color: white;
+    background-color: black;
+
+    width: fit-content;
+    padding: 0 20px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    position: absolute;
+    bottom: 0;
+
+    transform: translate(-50%);
+    left: 50%;
+}
+
+
     </style>
-    <link rel="stylesheet" type="text/css" href="https://s3.ap-northeast-2.amazonaws.com/materials.spartacodingclub.kr/bucketList/sparta-bucket2.css">
-
-    
-    
 </head>
-
-<body class="bg center">
-    <h1 class="title">2023 신년계획</h1>
-    <p class="msg">2023년 가보자고</p>
-    <div class="row flex-row wrap">
-        <div class="bucket img1 center">10kg 감량하기</div>
-        <div class="bucket img2 center done">코딩 공부하기</div>
-        <div class="bucket img2 center">책 10권 읽기</div>
-        <div class="bucket img1 center">스페인어 B1 마스터하기</div>
-        <div class="bucket img1 center">영어 회화 꾸준히 하기</div>
-        <div class="bucket img2 center">물 많이 마시기~</div>
+<body>
+    <div class="container">
+        <div class="photos">
+      <div id="image1" class="photo-frame">
+                <span id="desc1" class="photo-description">
+                    어디봄
+                </span>
+            </div>
+      <div id="image2" class="photo-frame">
+                <span id="desc2" class="photo-description">
+                    어디보냐고
+                </span>
+            </div>
+      <div id="image3" class="photo-frame">
+                <span id="desc3" class="photo-description">
+                    맥주 한 입
+                </span>
+            </div>
+      <div id="image4" class="photo-frame">
+                <span id="desc4" class="photo-description">
+                    맥주 두 입
+            </span>
+        </div>
     </div>
-
+    <div class="footer">
+        <p class="f-title">Happy Day</p>
+        <p class="f-date">2023.02.03</p>
+    </div>
 </body>
-
 </html>
